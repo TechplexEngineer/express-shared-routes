@@ -55,7 +55,7 @@ class RouteManager
     verb: (method, route, cb) ->
         # Store a clone of the route unmodified in the routeMap
         @routeMap[route.name] = _.clone route
-
+        @routeMap[route.name].method = method
         # clone the route to modify it and insert it in the route list
         r = _.clone route
 
